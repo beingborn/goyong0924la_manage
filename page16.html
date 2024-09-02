@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>관리자>통계및보고서관리>회계공시현황</title>
+
+        <!-- css 영역 -->
+        <link rel="stylesheet" href="style/reset.css">
+        <link rel="stylesheet" href="style/default.css">
+        <!-- 파비콘 -->
+        <link rel="shortcut icon" href="img/korea__favicon.ico">
+
+        <!-- 로컬 jquery 스와이퍼 cdn -->
+        <link rel="stylesheet" href="style/jquery-ui.min.css">
+        <script src="js/jquery-3.7.1.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+
+    </head>
+    <body>
+        <!-- 스킵 네비게이션 -->
+        <div class="skip__nav">
+            <a href="#main__content">본문 바로가기</a>
+        </div>
+        <div class="wrap manage__wrap">
+            <!-- 헤더 -->
+            <header class="header">
+                <div class="inner">
+                    <div class="header__btm">
+                        <h1 class="logo">
+                            <a href="index(변경).html" title="노동조합 회계공시 시스템 메인페이지로 바로가기">
+                                <span class="blind">노동조합 회계공시시스템</span>
+                                <img src="img/slogan_H48.png" alt="메인 홈페이지로고">
+                            </a>
+                        </h1>
+                        <div class="mobile__logo">
+                            <img src="img/mobile__logo.png" alt="모바일 버전 로고">
+                        </div>
+                        <div class="right__icon__set">
+
+                            <a href="login.html">
+                                <img src="img/icon20-1.png" alt="검색 아이콘">
+                                <span>로그인</span>
+                            </a>
+
+                            <!-- 전체메뉴 -->
+                            <a href="#" class="hamburger">
+                                <img src="img/hamburger__icon.png" alt="전체 메뉴 아이콘">
+                                <span>전체메뉴</span>
+                            </a>
+
+                            <a href="sign__up.html" class="sign__up">
+                                <img src="img/icon20-2.png" alt="회원가입 아이콘">
+                                <span>회원가입</span>
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <div class="header__gnb">
+                        <div>
+                            <nav id="gnb1">
+                                <ul id="head_menu" class="top__menu">
+                                    <li class="plus">
+                                        <a href="javascript:void(0);">시스템안내
+                                            <!-- <span class="sr_only">닫기</span> -->
+                                        </a>
+                                        <div class="sub__menu">
+                                            <ul>
+                                                <li class="plus">
+                                                    <a href="javascript:void(0);">회계공시시스템이란</a>
+                                                    <div class="dep3">
+                                                        <strong class="dep3__title">
+                                                            <a href="accn__desc.html">회계공시시스템이란</a>
+                                                        </strong>
+
+                                                    </div>
+                                                </li>
+                                                <li class="plus">
+                                                    <a href="javascript:void(0);">주요회계공시항목설명</a>
+                                                    <!-- dep3 오른쪽 영역 -->
+                                                    <div class="dep3">
+                                                        <strong class="dep3__title">
+                                                            <a href="main__accn__desc.html">주요회계공시항목설명</a>
+                                                        </strong>
+
+                                                    </div>
+                                                </li>
+                                                <li class="plus">
+                                                    <a href="javascript:void(0);">공지사항</a>
+                                                    <!-- dep3 오른쪽 영역 -->
+                                                    <div class="dep3">
+                                                        <strong class="dep3__title">
+                                                            <a href="notice.html">공지사항</a>
+                                                        </strong>
+
+                                                    </div>
+                                                </li>
+                                                <li class="plus">
+                                                    <a href="javascript:void(0);">자주묻는질문</a>
+                                                    <!-- dep3 오른쪽 영역 -->
+                                                    <div class="dep3">
+                                                        <strong class="dep3__title">
+                                                            <a href="faq.html">자주묻는질문</a>
+                                                        </strong>
+                                                    </div>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </li>
+
+                                    <li class="plus">
+                                        <a class="open--depth-2" href="javascript:void(0);">회계공시열람
+                                        </a>
+                                        <div class="sub__menu">
+                                            <ul>
+                                                <li class="plus">
+                                                    <a href="javascript:void(0);">회계공시열람</a>
+                                                    <div class="dep3">
+                                                        <strong class="dep3__title">
+                                                            <a href="accn__open.html">회계공시열람</a>
+                                                        </strong>
+                                                        <ul></ul>
+                                                    </div>
+                                                </li>
+                                                <li class="plus">
+                                                    <a href="javascript:void(0);">회계공시여부조회</a>
+                                                    <div class="dep3">
+                                                        <strong class="dep3__title">
+                                                            <a href="javascript:void(0);">회계공시여부조회</a>
+                                                        </strong>
+                                                        <ul></ul>
+                                                    </div>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </li>
+
+                                    <li class="plus">
+                                        <a class="open--depth-2" href="javascript:void(0);">회계공시등록
+                                        </a>
+                                        <div class="sub__menu">
+                                            <ul>
+                                                <li class="plus">
+                                                    <a href="javascript:void(0);">회계공시등록</a>
+                                                    <div class="dep3">
+                                                        <strong class="dep3__title">
+                                                            <a href="public__register.html">회계공시등록</a>
+                                                        </strong>
+                                                        <ul></ul>
+                                                    </div>
+                                                </li>
+                                                <li class="plus">
+                                                    <a href="javascript:void(0);">가맹노조산하조직관리</a>
+                                                    <div class="dep3">
+                                                        <strong class="dep3__title">
+                                                            <a href="union__management.html">가맹노조산하조직관리</a>
+                                                        </strong>
+                                                        <ul></ul>
+                                                    </div>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <main class="content manage__default__style data__modal__wrap">
+                <div class="visual__bg">
+                    <div class="inner">
+                      <div class="visual__text">
+                        <h2>노동조합 회계공시 조회</h2>
+                        <p>회계공시를 조회할 수 있는 페이지입니다.</p>
+                      </div>
+                    </div>
+                </div>
+
+
+                <div class="inner">
+                    <!-- 버튼 -->
+                    <div class="function__group">
+                        <button type="button" class="check__data btn__control bg--manage--gray--00">초기화</button>
+                        <button type="button" data-target=".data__modal" class="check__data btn__control bg--manage--blue--00" id="report__open">조회</button>
+                        <button type="button" class="btn__control bg--manage--black--00">다운로드</button>
+                        <button type="button" class="btn__control bg--manage--black--00">설정</button>
+                    </div>
+                    <!-- 상단 검색폼 -->
+                    <div class="search__form" style="margin-bottom: 2rem;">
+                        <form action="POST" class="flex--box" style="border-top: 0.1rem solid #ddd;">
+                                <div class="form-input">
+                                    <div class="form-content">
+                                        <div style="min-width: 10rem;" class="manage__select">
+                                            <select name="name2" id="name2" class="select--no--style" style="min-height: 4rem; position: relative;">
+                                                <option value="option1">전체</option>
+                                                <option value="option1">2023</option>
+                                                <option value="option1">2022</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>    
+                        </form>
+                    </div>
+                    <!-- 조회 표 결과 -->
+                    <div class="lnb__title flex__title">
+                        <h2>조회결과</h2>
+                        <span>건수: 3건</span>
+                    </div>
+                    <!-- 조회 결과 테이블 -->
+                    <div class="dis__info check__result" style="margin-bottom: 6rem;">
+                        <div class="tab__detail table__vertical">
+                          <table class="border-top-large">
+                            <caption>
+                              자산 및 부채현황 {구분, 자산}
+                            </caption>
+                            <colgroup class="report__col">
+                              <col>
+                              <col>
+                              <col>
+                              <col>
+                              <col>
+                              <col>
+                              <col>
+                              <col>
+                              <col>
+                              <col>
+                              <col>
+                              <col>
+                              <col>
+                              <col>
+                              <col>
+                            </colgroup>
+                            <thead>
+                              <tr>
+                                <th scope="col">번호</th>
+                                <th>노동조합명</th>
+                                <th>공시대상</th>
+                                <th>대상제외</th>
+                                <th>공시여부</th>
+                                <th>새액공제</th>
+                                <th>사업자명</th>
+                                <th>설립연월</th>
+                                <th>전체근로자수</th>
+                                <th>조합원수</th>
+                                <th>총연합단체</th>
+                                <th>연합단체</th>
+                                <th>...</th>
+                                <th>기타</th>
+                                <th>차년도이월금</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td class="txt--l pd--10-l">테스트</td>
+                                <td class="txt--c"></td>
+                                <td class="txt--c"></td>
+                                <td class="txt--c"></td>
+                                <td class="txt--c"></td>
+                                <td class="txt--c"></td>
+                                <td class="txt--c"></td>
+                                <td class="txt--c"></td>
+                                <td class="txt--c"></td>
+                                <td class="txt--c">
+                                    <span></span>
+                                </td>
+                                <td class="txt--c"></td>
+                                <td class="txt--c"></td>
+                                <td class="txt--c"></td>
+                                <td class="txt--c"></td>
+                              </tr>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td class="txt--l pd--10-l">테스트</td>
+                                <td class="txt--c"></td>
+                                <td class="txt--c"></td>
+                                <td class="txt--c"></td>
+                                <td class="txt--c"></td>
+                                <td class="txt--c"></td>
+                                <td class="txt--c"></td>
+                                <td class="txt--c"></td>
+                                <td class="txt--c"></td>
+                                <td class="txt--c"></td>
+                                <td class="txt--c"></td>
+                                <td class="txt--c"></td>
+                                <td class="txt--c"></td>
+                                <td class="txt--c"></td>
+                              </tr>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td class="txt--l pd--10-l">테스트</td>
+                                <td class="txt--c"></td>
+                                <td class="txt--c"></td>
+                                <td class="txt--c"></td>
+                                <td class="txt--c"></td>
+                                <td class="txt--c"></td>
+                                <td class="txt--c"></td>
+                                <td class="txt--c"></td>
+                                <td class="txt--c"></td>
+                                <td class="txt--c"></td>
+                                <td class="txt--c"></td>
+                                <td class="txt--c"></td>
+                                <td class="txt--c"></td>
+                                <td class="txt--c"></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+
+
+
+                      <!-- 조회 모달 -->
+
+                      <div class="data__modal manage__report__modal">
+                        <div class="modal__inner">
+                            <div class="modal__check">
+                                <button type="button" class="bg--manage--blue--00">조회</button>
+                                <button type="button" class="bg--manage--black--00">닫기</button>
+                            </div>
+                            <div class="modal__table">
+                                <div class="modal__info flex--start">
+                                    <!-- <h2>조회정보</h2> -->
+                                    <div class="lnb__title flex__title">
+                                        <h2 style="margin-bottom: 0;">조회결과</h2>
+                                      </div>
+                                    <div class="radio__wrap mg--20-l">
+                                        <div class="flex--box-c">
+                                            <input type="radio" name="mo-2" id="whole">
+                                            <label for="whole">전체</label>
+                                            <input type="radio" name="mo-2" id="thowsand">
+                                            <label for="thowsand">1,000인 이상</label>
+                                        </div>
+                                    </div>
+                                </div>
+    
+    
+                                <!-- 모달 조회 정보 테이블 -->
+                                <div class="table__horizontal__wrap">
+                                    <table class="border-top-large main__table table--fixed">
+                                        <caption>모달 조회 정보 테이블</caption>
+                                        <colgroup>
+                                            <col style="width: 15.38%;">
+                                            <col>
+                                            <col style="width: 15.38%;">
+                                            <col>
+                                            <col style="width: 15.38%;">
+                                            <col>
+                                        </colgroup>
+                                        <tbody>
+                                            <!-- type 1 -->
+                                            <!-- 노동조합 체계 정보 기존-->
+                                            <tr>
+                                                <th scope="col" class="- report__th">
+                                                  <label for="example24">노동조합명</label>
+                                                </th>
+                                                <td colspan="3" class="search__work__group border--no">
+                                                    <div class="td__container">
+                                                        <input type="text" value="" id="example24" placeholder="노동조합명을 입력하세요.">
+                                                    </div>
+                                                </td>
+                                                <td class="border--no"></td>
+                                              </tr>
+                                             <tr >
+                                                <th scope="row">
+                                                    <label for="example25">총연합단체</label>
+                                                </th>
+                                                <td>
+                                                    <div class="td__container">
+                                                        <select name="category" id="example25" class="select--no--style select__renew">
+                                                            <option value="전체">전체</option>
+                                                        </select>
+                                                    </div>
+                                                </td>
+                                                <th scope="row">
+                                                    <label for="ct6">연합단체</label>
+                                                </th>
+                                                <td>
+                                                    <div class="td__container">
+                                                        <select name="category" id="ct6" class="select--no--style select__renew">
+                                                            <option value="전체">전체</option>
+                                                        </select>
+                                                    </div>
+                                                </td>
+                                                <th scope="row">
+                                                    <label for="ct7">단위노동조합</label>
+                                                </th>
+                                                <td>
+                                                    <div class="td__container">
+                                                        <select name="category" id="ct7" class="select--no--style select__renew">
+                                                            <option value="전체">전체</option>
+                                                        </select>
+                                                    </div>
+                                                </td>
+                                            </tr> 
+                                            <tr >
+    
+                                                <th scope="row">
+                                                    <label for="ct8">지부</label>
+                                                </th>
+                                                <td>
+                                                    <div class="td__container">
+                                                        <select name="category" id="ct8" class="select--no--style select__renew">
+                                                            <option value="전체">전체</option>
+                                                        </select>
+                                                    </div>
+                                                </td>
+                                                <th scope="row">
+                                                    <label for="ct9">지회</label>
+                                                    
+                                                </th>
+                                                <td>
+                                                    <div class="td__container">
+                                                        <select name="category" id="ct9" class="select--no--style select__renew">
+                                                            <option value="전체">전체</option>
+                                                        </select>
+                                                    </div>
+                                                </td>
+                                                <th scope="row">
+                                                    <label for="ct10">분회</label>
+                                                </th>
+                                                <td>
+                                                    <div class="td__container">
+                                                        <select name="category" id="ct10" class="select--no--style select__renew">
+                                                            <option value="전체">전체</option>
+                                                        </select>
+                                                    </div>
+                                                </td>
+                                            </tr> 
+                                        </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+    
+                                <!-- 조회 모달 radio 테이블 -->
+                                <div class="modal__table" id="result__object" style="padding-bottom: 4rem;">
+                                  <div class="lnb__title flex__title">
+                                    <h2>결과항목</h2>
+                                  </div>
+                                  <div class="dis__info modal__result table__template__radio">
+                                    <table class="radio__table">
+                                        <caption>~~</caption>
+                                        <tr>
+                                            <th scope="col">
+                                                <label for="chk_6-1-1">자산 및 부채</label>
+                                            </th>
+                                    
+                                            <td class="checkbox__wrap pd--10-l">
+                                                <div class="flex--box-c checkbox__container-margin">
+                                                    <input type="checkbox" name="chk" id="jchk_All">
+                                                    <label for="chk_6-1-1" class="mg--10-r">전체</label>
+                                                    <input type="checkbox" name="chk" id="chk_6-1-2">
+                                                    <label for="chk_6-1-2">현금 및 예금</label>
+                                                    <input type="checkbox" name="chk" id="chk_6-1-3">
+                                                    <label for="chk_6-1-3">토지</label>
+                                                    <input type="checkbox" name="chk" id="chk_6-1-4">
+                                                    <label for="chk_6-1-4">건물</label>
+                                                    <input type="checkbox" name="chk" id="chk_6-1-5">
+                                                    <label for="chk_6-1-5">기타 자산</label>
+                                                    <input type="checkbox" name="chk" id="chk_6-1-6">
+                                                    <label for="chk_6-1-6">부채</label>
+                                                </div>
+                                            </td>
+                                        </tr>
+    
+                            
+    
+                                        <tr>
+                                            <th scope="col">
+                                                <label for="rdo_6-2-1">사용여부</label>
+                                            </th>
+                                            <td class="radio__wrap">
+                                                <div style="display: flex;">
+                                                    <div class="pd--10-m mg--10-r">
+                                                        <div class="flex--box-c">
+                                                            <input type="checkbox" name="rdo_6-2" id="schk_All">
+                                                            <label for="rdo_6-2-1" class="pd--10-l">전체</label>
+                                                        </div>
+                                                    </div>
+    
+                                                    <div>
+                                                    
+                                                        <div class="checkbox__container-margin flex--box-c">
+                                                            <input type="checkbox" name="chk-2" id="chk_6-2-2">
+                                                            <label for="chk_6-2-2">수입총계</label>
+                                                            <input type="checkbox" name="chk-2" id="chk_6-2-3">
+                                                            <label for="chk_6-2-3">전년도 이월금</label>
+                                                            <input type="checkbox" name="chk-2" id="chk_6-2-4">
+                                                            <label for="chk_6-2-4">조합비</label>
+                                                            <input type="checkbox" name="chk-2" id="chk_6-2-5">
+                                                            <label for="chk_6-2-5">상급단체 교부금</label>
+                                                            <input type="checkbox" name="chk-2" id="chk_6-2-6">
+                                                            <label for="chk_6-2-6">하부조직 부과금</label>
+                                                        </div>
+                                                        <div class="checkbox__container-margin flex--box-c">
+                                                            <input type="checkbox" name="chk-2" id="chk_6-3-1">
+                                                            <label for="chk_6-3-1">후원금</label>
+                                                            <input type="checkbox" name="chk-2" id="chk_6-3-2">
+                                                            <label for="chk_6-3-2">타회계 전입금</label>
+                                                            <input type="checkbox" name="chk-2" id="chk_6-3-3">
+                                                            <label for="chk_6-3-3">보조금 수입</label>
+                                                            <input type="checkbox" name="chk-2" id="chk_6-3-4">
+                                                            <label for="chk_6-3-4">수익사업 수입</label>
+                                                            <input type="checkbox" name="chk-2" id="chk_6-3-5">
+                                                            <label for="chk_6-3-5">기타</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col">
+                                                <label for="rdo_6-4-1">사용여부</label>
+                                            </th>
+                                            <td class="radio__wrap">
+    
+                                                <div style="display: flex;">
+                                                    <div class="pd--10-m mg--10-r">
+                                                        <div class="flex--box-c">
+                                                            <input type="checkbox" name="rdo_6-2" id="rchk_All">
+                                                            <label for="rdo_6-2-1" class="pd--10-l">전체</label>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div>
+                                                        <div class="checkbox__container-margin flex--box-c">
+                                                            <input type="checkbox" name="chk-3" id="chk_6-4-2">
+                                                            <label for="chk_6-4-2">지출총계</label>
+                                                            <input type="checkbox" name="chk-3" id="chk_6-4-3">
+                                                            <label for="chk_6-4-3">일반관리비용 전체</label>
+                                                            <input type="checkbox" name="chk-3" id="chk_6-4-4">
+                                                            <label for="chk_6-4-4">인건비</label>
+                                                            <input type="checkbox" name="chk-3" id="chk_6-4-5">
+                                                            <label for="chk_6-4-5">업무추진비</label>
+                                                            <input type="checkbox" name="chk-3" id="chk_6-4-6">
+                                                            <label for="chk_6-4-6">기타운영비</label>
+                                                        </div>
+                                                    
+                                                        <div class="checkbox__container-margin flex--box-c">
+                                                            <input type="checkbox" name="chk-3" id="chk_6-5-1">
+                                                            <label for="chk_6-5-1">사업수행 비용전체</label>
+                                                            <input type="checkbox" name="chk-3" id="chk_6-5-2">
+                                                            <label for="chk_6-5-2">총회 등 대회비</label>
+                                                            <input type="checkbox" name="chk-3" id="chk_6-5-3">
+                                                            <label for="chk_6-5-3">조직 사업비</label>
+                                                            <input type="checkbox" name="chk-3" id="chk_6-5-4">
+                                                            <label for="chk_6-5-4">정책 사업비</label>
+                                                            <input type="checkbox" name="chk-3" id="chk_6-5-5">
+                                                            <label for="chk_6-5-5">교육홍보 사업비</label>
+                                                        </div>
+                                                    
+                                                        <div class="checkbox__container-margin flex--box-c">
+                                                            <input type="checkbox" name="chk-3" id="chk_6-6-1">
+                                                            <label for="chk_6-6-1">교섭 쟁의 사업비</label>
+                                                            <input type="checkbox" name="chk-3" id="chk_6-6-2">
+                                                            <label for="chk_6-6-2">상급단체 부과금</label>
+                                                            <input type="checkbox" name="chk-3" id="chk_6-6-3">
+                                                            <label for="chk_6-6-3">하부조직 교부금</label>
+                                                            <input type="checkbox" name="chk-3" id="chk_6-6-4">
+                                                            <label for="chk_6-6-4">타회계 전출금</label>
+                                                            <input type="checkbox" name="chk-3" id="chk_6-6-5">
+                                                            <label for="chk_6-6-5">기타</label>
+                                                        </div>
+                                                    
+                                                        <div class="checkbox__container-margin flex--box-c">
+                                                            <input type="checkbox" name="chk-3" id="chk_6-7-1">
+                                                            <label for="chk_6-7-1">기타 사업비</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+    
+    
+                                    <script>
+                                        /* 
+                                            1. 체크 박스 전체 클릭 시  해당 div 안의 나머지에 모두 체크 표시하기
+                                            2. 만약 다시 전체를 다시 클릭하면 전체 비활성화 
+                                            3. 총합 체크 개수와 체크 개수 값 비교해서 전체 체크 활성화 비활성화
+                                        */
+
+                                        $(document).ready(function(){
+                                            $('#report__open').on('click', function(){
+                                            $('.manage__default__style .manage__report__modal').show();
+                                            $('.modal__bg').show();
+
+                                            $('.manage__default__style .modal__table').show();
+                                            $('.modal__check button').show();
+
+                                            })
+
+                                            $('.modal__check button').on('click',function(){
+                                            $('.manage__default__style .manage__report__modal').hide();
+                                            $('.manage__default__style .modal__table').hide();
+                                            $('.modal__check button').hide();
+                                            $('.modal__bg').hide();
+                                            })
+                                            // $('.modal__check button').hide();
+                                        })
+                                 
+
+
+
+
+    
+                                        $(document).ready(function() {
+    
+                                            $("#jchk_All").click(function() { // 1번째 줄
+                                                if($("#jchk_All").is(":checked")) $("input[name=chk]").prop("checked", true);
+                                                else $("input[name=chk]").prop("checked", false);
+                                            });
+                                            
+                                            $("input[name=chk]").click(function() {
+                                                var total = $("input[name=chk]").length;
+                                                var checked = $("input[name=chk]:checked").length;
+                                                
+                                                if(total != checked) $("#jchk_All").prop("checked", false);
+                                                else $("#jchk_All").prop("checked", true); 
+                                            });
+    
+                                            
+                                            $("#schk_All").click(function() { // 2번째 줄
+                                                if($("#schk_All").is(":checked")) $("input[name=chk-2]").prop("checked", true);
+                                                else $("input[name=chk-2]").prop("checked", false);
+                                            });
+                                            
+                                            $("input[name=chk-2]").click(function() {
+                                                var total = $("input[name=chk-2]").length;
+                                                var checked = $("input[name=chk-2]:checked").length;
+                                                
+                                                if(total != checked) $("#schk_All").prop("checked", false);
+                                                else $("#schk_All").prop("checked", true); 
+                                            });
+    
+    
+                                            $("#rchk_All").click(function() {
+                                                if($("#rchk_All").is(":checked")) $("input[name=chk-3]").prop("checked", true);
+                                                else $("input[name=chk-3]").prop("checked", false);
+                                            });
+                                            
+    
+                                            
+                                            $("input[name=chk-3]").click(function() { // 3번째 줄
+                                                var total = $("input[name=chk-3]").length;
+                                                var checked = $("input[name=chk-3]:checked").length;
+                                                
+                                                if(total != checked) $("#rchk_All").prop("checked", false);
+                                                else $("#rchk_All").prop("checked", true); 
+                                            });
+    
+                                        });
+                                    </script>
+    
+    
+    
+    
+    
+    
+                                    </div>
+                                    <!-- <div class="modal__close">
+                                        <button type="button">닫기</button>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    </main>
+                </div>
+                
+            </main>
+
+            <!-- 푸터 -->
+            <footer>
+                <div class="footer__bottom" style="background-color: #F0F0F0;">
+                    <div class="inner">
+                        <div class="footer__logo">
+                            <img src="img/slogan_H48.png" alt="하단 로고">
+                        </div>
+                        <div class="mobile__logo">
+                            <img src="img/mobile__logo.png" alt="하단 모바일 로고">
+                        </div>
+                        <div class="footer__flex">
+                            <div class="footer__info">
+                                <p class="location">30117 세종특별자치시 한누리대로 422 정부세종청사 11동 고용노동부(044-202-7828)</p>
+                                <p class="copyright">Copyright(c)Ministry of Employment and Labor. All rights reserved.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <div class="modal__bg"></div>
+            <div class="gnb__bg"></div>
+        </div>
+
+        <!-- js 파일 -->
+        <script src="js/default.js"></script>
+        <script src="js/manage__accounting.js"></script>
+    </body>
+</html>
