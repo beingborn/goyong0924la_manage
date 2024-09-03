@@ -176,7 +176,7 @@
                 <div class="visual__bg">
                     <div class="inner">
                         <div class="visual__text">
-                            <h2>회계공시 대상자 검증 관리</h2>
+                            <h2>회계공시 대상자 검증관리</h2>
                             <p>회계공시 대상자의 검증을 관리할 수 있는 페이지 입니다.</p>
                         </div>
                     </div>
@@ -185,7 +185,7 @@
                 <div class="inner">
                     <div class="manage__default__top">
                         <div class="function__group">
-                            <h2 style="margin-right: auto; font-size: 2.8rem; font-weight: 700;">회계공시 대상자 관리</h2>
+                            <h2 style="margin-right: auto; font-size: 2.8rem; font-weight: 700;">회계공시 대상자 검증관리</h2>
 
                             <button type="button" class="btn__control bg--manage--gray--00">초기화</button>
                             <button
@@ -209,6 +209,9 @@
                                             class="select--no--style"
                                             style="min-height: 4rem; position: relative;">
                                             <option value="option1">전체</option>
+                                            <option value="2024">2024</option>
+                                            <option value="2023">2023</option>
+                                            <option value="2022">2022</option>
                                         </select>
                                     </div>
                                     <input
@@ -254,7 +257,7 @@
                                         <div class="acco-in first-acco">
                                             <ul class="sub-ul">
                                                 <li class="depth-0-li">
-                                                    <div class="menu-head depth-0" style="border-bottom: 0.5rem solid #ddd">
+                                                    <div class="menu-head depth-0" style="border-bottom: 0.5rem solid #246BEB">
                                                         <h3 class="tit">노동조합</h3>
                                                     </div>
                                                     <div class="menu-body depth-0-body">
@@ -320,7 +323,7 @@
 
                                                                 <li class="depth-1-li">
                                                                     <div class="menu-head depth-1">
-                                                                        <span class="menu-title">전국노동조합총연맹</span>
+                                                                        <span class="menu-title">전국민주노동조합총연맹</span>
                                                                         <button type="button" class="btn btn-ico menu-btn"></button>
                                                                     </div>
                                                                     <div class="menu-body depth-2" style="display: none;">
@@ -377,7 +380,7 @@
 
                                                                 <li class="depth-1-li">
                                                                     <div class="menu-head depth-1">
-                                                                        <span class="menu-title">경기 노동조합총연맹</span>
+                                                                        <span class="menu-title">대한민국노동조합총연맹</span>
                                                                         <button type="button" class="btn btn-ico menu-btn"></button>
                                                                     </div>
                                                                     <div class="menu-body depth-2" style="display: none;">
@@ -433,7 +436,7 @@
                                                                 <!-- li -->
                                                                 <li class="depth-1-li">
                                                                     <div class="menu-head depth-1">
-                                                                        <span class="menu-title">노동조합</span>
+                                                                        <span class="menu-title">국민통합노동조합총연맹</span>
                                                                         <button type="button" class="menu-btn"></button>
                                                                     </div>
                                                                     <div class="menu-body depth-2-body" style="display: none;">
@@ -459,7 +462,7 @@
                                                                 <!-- depth - 1 li -->
                                                                 <li class="depth-1-li">
                                                                     <div class="menu-head depth-1">
-                                                                        <span class="menu-title">미가입</span>
+                                                                        <span class="menu-title">미가맹</span>
                                                                         <button type="button" class="menu-btn"></button>
                                                                     </div>
                                                                     <div class="menu-body depth-2-body" style="display: none;">
@@ -492,37 +495,45 @@
                                 </li>
                             </ul>
                         </div>
+
+
+
                         <div class="main">
                             <div class="content user__manage">
                                 <div class="lnb__title flex__title">
                                     <h2>조회결과</h2>
-                                    <span>건수:734건</span>
+                                    <span>건수:2건</span>
                                 </div>
                                 <div class="check__result">
                                     <div class="tab__detail table__vertical">
-                                        <table class="border-top-large">
+                                        <table class="border-top-large" style="min-width: 60rem;">
                                             <!-- border-top-large를 넣으면 테이블 상단에 굵은 보더 추가 -->
                                             <caption>
                                                 자산 및 부채현황 {구분, 자산}
                                             </caption>
                                             <colgroup>
+                                                <col style="width: 6%;">
+                                                <col style="width: 6%;">
+                                                <col style="width: 20%;">
+                                                <col style="width: 8%;">
+                                                <col style="width: 4%;">
+                                                <col style="width: 20%;">
                                                 <col>
                                                 <col>
-                                                <col>
-                                                <col>
-                                                <col>
-                                                <col>
-                                                <col>
-                                                <col>
-                                                <col>
-                                                <col>
+                                                <col style="width: 11%;">
+                                                <col style="width: 11%;">
+                                                <col style="width: 11%;">
                                             </colgroup>
                                             <thead>
                                                 <tr>
                                                     <th scope="col">번호</th>
+                                                    <th>구분</th>
                                                     <th>노동조합명</th>
                                                     <th>대표자명</th>
-                                                    <th>주부여부</th>
+                                                    <th>주부
+                                                        <br>
+                                                        여부
+                                                    </th>
                                                     <th>총연합단체</th>
                                                     <th>연합단체</th>
                                                     <th>단위노동조합
@@ -538,36 +549,26 @@
                                                 <tr data-target=".data__modal">
                                                     <!-- txt--c 중앙정렬 txt--l 왼쪽 정렬 txt--r 오른쪽 정렬 -->  
                                                     <th scope="row">1</th>
-                                                    <td class="txt--l pd--10-l">노동조합</td>
-                                                    <td class="txt--c">홍길동</td>
+                                                    <td class="txt--c">중복</td>
+                                                    <td class="txt--c">강원도지역버스노동조합</td>
+                                                    <td class="txt--c">김X만</td>
                                                     <td class="txt--c">주</td>
-                                                    <td class="txt--c">전국민노동조합</td>
-                                                    <td class="txt--c">전국연합</td>
-                                                    <td class="txt--c">홍길동조합</td>
+                                                    <td class="txt--c">한국노동조합총연맹</td>
+                                                    <td class="txt--c">전국자동차노동조합연맹</td>
+                                                    <td class="txt--c">강원도지역버스노동조합</td>
                                                     <td class="txt--c"></td>
                                                     <td class="txt--c"></td>
                                                     <td class="txt--c"></td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row">1</th>
-                                                    <td class="txt--l pd--10-l">노동조합</td>
-                                                    <td class="txt--c">홍길동</td>
-                                                    <td class="txt--c">주</td>
-                                                    <td class="txt--c">전국민노동조합</td>
-                                                    <td class="txt--c">전국연합</td>
-                                                    <td class="txt--c">홍길동조합</td>
-                                                    <td class="txt--c"></td>
-                                                    <td class="txt--c"></td>
-                                                    <td class="txt--c"></td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">1</th>
-                                                    <td class="txt--l pd--10-l">노동조합</td>
-                                                    <td class="txt--c">홍길동</td>
-                                                    <td class="txt--c">주</td>
-                                                    <td class="txt--c">전국민노동조합</td>
-                                                    <td class="txt--c">전국연합</td>
-                                                    <td class="txt--c">홍길동조합</td>
+                                                    <th scope="row">2</th>
+                                                    <td class="txt--c">중복</td>
+                                                    <td class="txt--c">강원도지역버스노동조합</td>
+                                                    <td class="txt--c">김X만</td>
+                                                    <td class="txt--c">부</td>
+                                                    <td class="txt--c">전국민주노동조합총연맹</td>
+                                                    <td class="txt--c">미가맹</td>
+                                                    <td class="txt--c">강원도지역버스노동조합</td>
                                                     <td class="txt--c"></td>
                                                     <td class="txt--c"></td>
                                                     <td class="txt--c"></td>
@@ -580,7 +581,9 @@
                                         <a href="#" class="step first"></a>
                                         <a href="#" class="step pre"></a>
                                         <a href="#" class="active">1</a>
-                                        <a href="#" class="">2</a>
+
+                                        <!-- 임시 주석 처리 -->
+                                        <!-- <a href="#" class="">2</a>
                                         <a href="#" class="">3</a>
                                         <a href="#" class="">4</a>
                                         <a href="#" class="">5</a>
@@ -588,7 +591,8 @@
                                         <a href="#" class="">7</a>
                                         <a href="#" class="">8</a>
                                         <a href="#" class="">9</a>
-                                        <a href="#" class="">10</a>
+                                        <a href="#" class="">10</a> -->
+
                                         <a
                                             href="#"
                                             class="step next"
@@ -602,7 +606,7 @@
                                     </ul>
 
                                     <div class="lnb__title flex__title" style="padding-top: 4rem;">
-                                        <h2>회계대상 노동조합 정보</h2>
+                                        <h2>회계공시 제외대상 노동조합 정보</h2>
                                         <!-- <span>건수:3건</span> -->
                                     </div>
 
@@ -639,11 +643,9 @@
                                                     </tr>
                                                     <tr>
                                                         <th>
-                                                            <span class="must__type">
                                                                 <label for="dqwd">
                                                                     총연합단체
                                                                 </label>
-                                                            </span>
                                                         </th>
                                                         <td>
                                                             <div class="td__container">
@@ -651,11 +653,9 @@
                                                             </div>
                                                         </td>
                                                         <th>
-                                                            <span class="must__type">
                                                                 <label for="dqwd">
                                                                     연합단체
                                                                 </label>
-                                                            </span>
                                                         </th>
                                                         <td>
                                                             <div class="td__container">
@@ -743,7 +743,7 @@
 
                                 <div class="modal__table">
                                     <div class="lnb__title flex__title">
-                                        <h2>회계공시 대상년월 : 2024-07</h2>
+                                        <h2>회계공시 대상년 : 2024</h2>
                                         <span>건수 1건</span>
                                     </div>
                                     <div class="modal__result">
@@ -812,7 +812,7 @@
 
                                 <div class="modal__table">
                                     <div class="lnb__title flex__title">
-                                        <h2>회계공시 대상년월 : 2024-07</h2>
+                                        <h2>회계공시 대상년 : 2024</h2>
                                         <span>건수 2건</span>
                                     </div>
                                     <div class="modal__result">

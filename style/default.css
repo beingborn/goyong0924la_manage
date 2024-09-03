@@ -30,25 +30,25 @@ table {
   font-family: "Pretendard GOV";
   font-weight: 800;
   font-display: swap;
-  src: local("Pretendard GOV ExtraBold"), url(../../font/woff2/PretendardGOV-ExtraBold.woff2) format("woff2"), url(../../woff/PretendardGOV-ExtraBold.woff) format("woff");
+  src: local("Pretendard GOV ExtraBold"), url(../font/woff2/PretendardGOV-ExtraBold.woff2) format("woff2"), url(../font/woff/PretendardGOV-ExtraBold.woff) format("woff");
 }
 @font-face {
   font-family: "Pretendard GOV";
   font-weight: 700;
   font-display: swap;
-  src: local("Pretendard GOV Bold"), url(../../font/woff2/PretendardGOV-Bold.woff2) format("woff2"), url(../../font/woff/PretendardGOV-Bold.woff) format("woff");
+  src: local("Pretendard GOV Bold"), url(../font/woff2/PretendardGOV-Bold.woff2) format("woff2"), url(../font/woff/PretendardGOV-Bold.woff) format("woff");
 }
 @font-face {
   font-family: "Pretendard GOV";
   font-weight: 500;
   font-display: swap;
-  src: local("Pretendard GOV Medium"), url(../../font/woff2/PretendardGOV-Medium.woff2) format("woff2"), url(../../font/PretendardGOV-Medium.woff) format("woff");
+  src: local("Pretendard GOV Medium"), url(../font/woff2/PretendardGOV-Medium.woff2) format("woff2"), url(../font/woff/PretendardGOV-Medium.woff) format("woff");
 }
 @font-face {
   font-family: "Pretendard GOV";
   font-weight: 400;
   font-display: swap;
-  src: local("Pretendard GOV Regular"), url(./woff2/PretendardGOV-Regular.woff2) format("woff2"), url(./woff/PretendardGOV-Regular.woff) format("woff");
+  src: local("Pretendard GOV Regular"), url(../font/woff2/PretendardGOV-Regular.woff2) format("woff2"), url(../font/woff/PretendardGOV-Regular.woff) format("woff");
 }
 body {
   font-size: 1.6rem;
@@ -479,7 +479,7 @@ textarea {
   display: block;
   width: 2.4rem;
   height: 2.4rem;
-  background: url(../../img/info__tip.svg) no-repeat center;
+  background: url(../img/info__tip.svg) no-repeat center;
 }
 
 .info__tip__box {
@@ -844,10 +844,6 @@ table caption {
   width: 34.62%;
 }
 
-td {
-  min-height: 5.8rem;
-}
-
 .radio__table th {
   width: 12.5%;
   line-height: 5.8rem;
@@ -1008,16 +1004,21 @@ td {
 
 .table__vertical table thead tr th {
   font-weight: 500;
-  height: 6rem;
   background-color: #f8f8f8;
-  line-height: 6rem;
   border-right: 0.1rem solid #ddd;
   text-align: center;
   vertical-align: middle;
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: keep-all;
 }
 
 .table__vertical tr {
   border-bottom: 0.1rem solid #ddd;
+}
+
+.table__vertical thead .min__h__box {
+  padding: 0;
 }
 
 .table__vertical tr th:nth-child(1) {
@@ -1031,8 +1032,7 @@ td {
 }
 
 .table__vertical tbody td, .table__vertical tbody th {
-  height: 100%;
-  height: 6rem;
+  min-height: 6rem;
   border-right: 0.1rem solid #ddd;
 }
 
@@ -1042,8 +1042,6 @@ td {
 }
 
 .table__vertical tbody td {
-  padding-left: 1rem;
-  padding-right: 1rem;
   vertical-align: middle;
 }
 
@@ -1113,10 +1111,6 @@ td {
   overflow-x: auto;
 }
 
-.manage__wrap .table__vertical table {
-  min-width: 96rem;
-}
-
 .manage__wrap .table__vertical colgroup col {
   min-width: 5rem;
 }
@@ -1127,6 +1121,32 @@ td {
 
 .check__result tr {
   cursor: pointer;
+}
+
+.flex__cell {
+  display: flex;
+  align-items: center; /* 수직 중앙 정렬 */
+  justify-content: center; /* 수평 중앙 정렬 */
+  min-height: 6rem;
+}
+
+.min__h__box {
+  display: flex;
+  align-items: center;
+  min-height: 6rem;
+  padding: 0 1rem;
+}
+
+.text--r {
+  justify-content: flex-end;
+}
+
+.text--l {
+  justify-content: flex-start;
+}
+
+.text--c {
+  justify-content: center;
 }
 
 /* 
@@ -1224,13 +1244,12 @@ input[type=file]::file-selector-button {
 
 .form-input, .form-radio {
   display: flex;
-  align-items: center; /* 세로 중앙 정렬 */
-  width: 100%; /* 부모의 너비를 100%로 */
+  align-items: center;
+  width: 100%;
   height: 5.8rem;
 }
 
 .form__head .form-title {
-  min-width: 20.4rem;
   background-color: #F9F9FA;
 }
 
@@ -1267,7 +1286,8 @@ input[type=file]::file-selector-button {
 }
 
 .form__head .form-title:nth-of-type(1) {
-  width: 15.38%;
+  width: 23.44%;
+  max-width: 30rem;
 }
 
 .form__row {
@@ -1276,6 +1296,11 @@ input[type=file]::file-selector-button {
 
 .form__row > .form-wrap {
   height: 5.8rem;
+}
+
+.form__row .td__container:nth-of-type(1) {
+  width: 23.44%;
+  max-width: 30rem;
 }
 
 .form__head > .form-title-file {
@@ -1469,7 +1494,7 @@ input[type=checkbox] {
 }
 
 .system-list .menu-head.depth-2 {
-  padding: 1.5rem 1.2rem;
+  padding: 1.5rem 1.6rem;
 }
 
 .system-list .menu-head.depth-3 {
@@ -1477,15 +1502,15 @@ input[type=checkbox] {
 }
 
 .system-list .menu-head.depth-4 {
-  padding-left: 28px;
+  padding-left: 24px;
 }
 
 .system-list .menu-head.depth-5 {
-  padding-left: 36px;
+  padding-left: 28px;
 }
 
 .system-list .menu-head.depth-6 {
-  padding-left: 44px;
+  padding-left: 32px;
 }
 
 .system-list .list-span {
@@ -1594,7 +1619,7 @@ input[type=checkbox] {
   width: 2rem;
   height: 2.4rem;
   background-size: cover;
-  background: url(../../img/file__icon.svg) no-repeat center;
+  background: url(../img/file__icon.svg) no-repeat center;
 }
 
 .breadcrumb {
@@ -1996,6 +2021,53 @@ input[type=checkbox] {
 
 #gnb2 {
   display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1200;
+  border: 1px solid blue;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  font-size: 1.7rem;
+}
+
+#gnb2.active {
+  display: block;
+}
+
+#gnb2.active > ul {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+#gnb2.active > ul > li {
+  display: block;
+}
+
+#gnb2.active > ul > li > a {
+  display: block;
+  width: 14rem;
+  margin-bottom: 0;
+  padding: 2rem 2.4rem;
+  line-height: 2.4rem;
+  font-size: 1.7rem;
+}
+
+#gnb2 > ul::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  width: 14rem;
+  height: calc(100% - 13rem);
+  background-color: #edf1f5;
+}
+
+#gnb2 > .gnb__top2 {
+  padding: 0 2.4rem;
 }
 
 /*
@@ -2225,10 +2297,6 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   padding: 1.5rem 1rem;
 }
 
-.manage__default__style .system-list .depth-2 {
-  padding: 1rem 1.2rem;
-}
-
 .manage__default__style label {
   line-height: 150%;
 }
@@ -2447,6 +2515,12 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   background-image: none;
 }
 
+.manage__default__style .table__vertical tbody td {
+  white-space: nowrap;
+  padding: 0 0.4rem;
+  overflow: hidden;
+}
+
 .manage__default__style .table__vertical tbody td, .manage__default__style .table__vertical tbody th {
   color: #191919;
   min-height: 3.5rem;
@@ -2489,6 +2563,7 @@ footer .footer__top .btn__flex .top__btn .last__btn {
 .manage__default__style .table__vertical table thead tr th {
   line-height: 150%;
   background-color: #f8f8f8;
+  padding: 1.45rem 0.4rem;
 }
 
 .manage__default__style .table__template__horizontal th {
@@ -2497,26 +2572,6 @@ footer .footer__top .btn__flex .top__btn .last__btn {
 
 .manage__default__style .table__template__horizontal th {
   padding-left: 1rem;
-}
-
-.manage__default__style .user__manage .check__result colgroup col:nth-child(1) {
-  width: 5%;
-}
-
-.manage__default__style .user__manage .check__result colgroup col:not(:first-child) {
-  width: auto;
-}
-
-.manage__default__style .user__manage .check__result colgroup col:nth-child(8) {
-  width: 11%;
-}
-
-.manage__default__style .user__manage .check__result colgroup col:nth-child(9) {
-  width: 11%;
-}
-
-.manage__default__style .user__manage .check__result colgroup col:nth-child(10) {
-  width: 11%;
 }
 
 .manage__default__style .modal__result tr {
@@ -3215,7 +3270,7 @@ footer .footer__top .btn__flex .top__btn .last__btn {
   width: 2rem;
   height: 2rem;
   margin-top: 0.2rem;
-  background-image: url(../../img/icon__helper__info.svg);
+  background-image: url(../img/icon__helper__info.svg);
   background-size: contain;
 }
 .login__page .helper__box .helper__desc__wrap .info-list {
@@ -3401,7 +3456,7 @@ footer .footer__top .btn__flex .top__btn .last__btn {
     right: 2.4rem;
     width: 2.4rem;
     height: 2.4rem;
-    background: url(../../img/calendar-days-regular--mo.svg) no-repeat center;
+    background: url(../img/calendar-days-regular--mo.svg) no-repeat center;
   }
   .sign__up__table__wrap .form__table .col2__th {
     min-height: auto;
@@ -3419,10 +3474,10 @@ footer .footer__top .btn__flex .top__btn .last__btn {
     min-width: auto;
   }
   .sign__up__table__wrap .select__renew {
-    background: url(../../img/select__renew__mo.svg) no-repeat 98% 50%;
+    background: url(../img/select__renew__mo.svg) no-repeat 98% 50%;
   }
   .sign__up__table__wrap .td__date .select__renew {
-    background: url(../../img/select__renew__mo.svg) no-repeat 92% 50%;
+    background: url(../img/select__renew__mo.svg) no-repeat 92% 50%;
   }
   .btn__full__wrap .function__group .btn__control {
     width: 100%;
@@ -3771,13 +3826,6 @@ select {
   width: auto;
 }
 
-.check__result colgroup col:first-child {
-  width: 6.6%;
-}
-.check__result colgroup col:not(:first-child) {
-  width: 11.675%;
-}
-
 .check__result .table__vertical table thead tr th:nth-child(1) {
   border-left: 0;
 }
@@ -3854,6 +3902,9 @@ select {
 
 .check__year__result .pagination {
   margin-bottom: 6rem;
+}
+.check__year__result .table__vertical table td {
+  padding-right: 0;
 }
 .check__year__result .table__vertical colgroup col:nth-child(1), .check__year__result .table__vertical colgroup col:nth-child(2) {
   width: 6.6%;
@@ -4131,13 +4182,12 @@ select {
 
 #sub__wrap .content .visual__bg .visual__text h2 {
   font-size: 3.2rem;
-  margin-bottom: 1.2rem;
+  margin-bottom: 2.8rem;
   white-space: nowrap;
 }
 
 #sub__wrap .content .visual__bg .visual__text p {
-  font-size: 1.8rem;
-  
+  font-size: 1.5rem;
 }
 
 .mobile__tab {
